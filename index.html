@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Roniel | Ferro e disciplina</title>
+  <meta name="description" content="Portfólio do Roniel sobre academia: rotina de treino, evolução, dicas e a sequência de dias treinando.">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Big+Shoulders+Display:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <header class="topo">
+    <div class="wrap topo-barra">
+      <a class="marca" href="#inicio">Roniel</a>
+
+      <nav id="menu" class="menu" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#sobre">Sobre mim</a></li>
+          <li><a href="#rotina">Rotina</a></li>
+          <li><a href="#evolucao">Evolução</a></li>
+          <li><a href="#dicas">Dicas</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="topo-acoes">
+        <button id="btn-tema" class="botao-simples" type="button" aria-label="Alternar entre modo claro e escuro">Modo claro</button>
+        <button id="btn-menu" class="botao-simples botao-menu" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- INÍCIO / SEQUÊNCIA -->
+    <section id="inicio" class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-texto">
+          <h1>Disciplina é o que sobra quando a motivação acaba</h1>
+          <p class="hero-sub">Sou o Roniel. Treino cinco vezes por semana e quero levar isso pela vida inteira. Este site mostra como eu faço isso.</p>
+          <a class="botao" href="#rotina">Ver minha rotina</a>
+        </div>
+
+        <div class="sequencia" aria-live="polite">
+          <svg class="chama" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M13.5 1.5c.4 3.2-1.4 5-3 7-1.5 1.8-3 3.7-3 6.5a6.5 6.5 0 0 0 13 0c0-3-1.7-5-3-6.5-.3 1.6-1 2.6-2 3 .5-3-.1-6.5-2-10z"/>
+          </svg>
+          <p class="sequencia-numero" id="sequencia-numero">0</p>
+          <p class="sequencia-legenda">dias de treino seguidos</p>
+          <p class="sequencia-hoje" id="sequencia-hoje">Carregando o treino de hoje...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE MIM -->
+    <section id="sobre" class="secao">
+      <div class="wrap sobre-grid">
+        <img class="sobre-foto" src="img/sobre.jpg" width="800" height="1000" alt="Foto do Roniel na academia (troque pela sua)">
+
+        <div class="sobre-texto">
+          <h2>Sobre mim</h2>
+          <p>Sou estudante de engenharia de software e treino há dois anos. Comecei porque não estava confortável com o meu corpo, e ver a minha mãe treinando me mostrou que dava para começar.</p>
+          <p>Treinei por um ano, parei por outro e voltei há um ano. Antes, minha rotina era ir para a escola e só. Hoje a academia é parte do meu dia, e a meta é que continue sendo para sempre.</p>
+
+          <h3>O que a academia é para mim</h3>
+          <dl class="significados">
+            <div>
+              <dt>Disciplina</dt>
+              <dd>Ir treinar nos dias sem vontade é o que mais me ensina.</dd>
+            </div>
+            <div>
+              <dt>Saúde</dt>
+              <dd>Quero uma vida saudável a longo prazo.</dd>
+            </div>
+            <div>
+              <dt>Descompressão</dt>
+              <dd>É o momento em que eu desligo de todo o resto.</dd>
+            </div>
+            <div>
+              <dt>Físico</dt>
+              <dd>Ver a carga subir e o corpo mudar.</dd>
+            </div>
+          </dl>
+
+          <p>Meu exercício favorito é a barra fixa. O que eu mais evito é o agachamento, mas eu faço do mesmo jeito.</p>
+          <p>No curto prazo, quero um bom emprego. No longo prazo, uma vida saudável, carro, casa, filhos e o shape mantido.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROTINA -->
+    <section id="rotina" class="secao secao-alt">
+      <div class="wrap">
+        <h2>Minha rotina</h2>
+        <p class="intro">Cinco treinos por semana, sempre à tarde, entre 2 horas e 2 horas e meia. O dia de hoje fica destacado.</p>
+
+        <ul class="semana">
+          <li data-dia="1"><span class="semana-dia">Segunda</span><span class="semana-treino">Push</span><span class="semana-foco">Peito, ombros e tríceps</span></li>
+          <li data-dia="2"><span class="semana-dia">Terça</span><span class="semana-treino">Pull</span><span class="semana-foco">Costas e bíceps, com barra fixa</span></li>
+          <li data-dia="3"><span class="semana-dia">Quarta</span><span class="semana-treino">Legs</span><span class="semana-foco">Pernas, com agachamento</span></li>
+          <li data-dia="4" class="descanso"><span class="semana-dia">Quinta</span><span class="semana-treino">Descanso</span><span class="semana-foco">Recuperar também é treinar</span></li>
+          <li data-dia="5"><span class="semana-dia">Sexta</span><span class="semana-treino">Upper</span><span class="semana-foco">Parte superior completa</span></li>
+          <li data-dia="6"><span class="semana-dia">Sábado</span><span class="semana-treino">Lower</span><span class="semana-foco">Parte inferior completa</span></li>
+          <li data-dia="0" class="descanso"><span class="semana-dia">Domingo</span><span class="semana-treino">Descanso</span><span class="semana-foco">Sono, comida e cabeça fresca</span></li>
+        </ul>
+        <!-- Para detalhar um dia, adicione um <ul> de exercícios dentro do <li> correspondente. -->
+      </div>
+    </section>
+
+    <!-- EVOLUÇÃO -->
+    <section id="evolucao" class="secao">
+      <div class="wrap evolucao-grid">
+        <div>
+          <h2>Minha evolução</h2>
+          <p class="intro">Acompanho tudo com fotos e com a progressão de carga. Arraste o controle para comparar o antes e o depois.</p>
+
+          <ol class="linha-tempo">
+            <li>
+              <h3>Há 2 anos: o começo</h3>
+              <p>Comecei a treinar e fui constante por um ano.</p>
+            </li>
+            <li>
+              <h3>Há 1 ano: a pausa</h3>
+              <p>Fiquei um ano parado. Foi o que me fez entender o valor de não parar.</p>
+            </li>
+            <li>
+              <h3>Hoje: a volta</h3>
+              <p>Um ano de treino contínuo desde que voltei, com carga subindo e fotos para provar.</p>
+            </li>
+          </ol>
+        </div>
+
+        <figure class="comparador" id="comparador">
+          <img class="comp-antes" src="img/antes.jpg" width="800" height="1000" alt="Foto do antes (troque pela sua)">
+          <img class="comp-depois" src="img/depois.jpg" width="800" height="1000" alt="Foto do depois (troque pela sua)">
+          <span class="comp-rotulo comp-rotulo-antes">Antes</span>
+          <span class="comp-rotulo comp-rotulo-depois">Depois</span>
+          <input id="comp-range" type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois">
+          <span class="comp-alca" aria-hidden="true"></span>
+        </figure>
+      </div>
+    </section>
+
+    <!-- VÍDEO -->
+    <section id="video" class="secao video-secao">
+      <div class="wrap">
+        <h2>Treino em movimento</h2>
+        <p class="intro">Um pouco do que acontece dentro da academia.</p>
+
+        <video class="video" controls preload="metadata" playsinline poster="img/video-capa.jpg">
+          <source src="video/treino1.mp4" type="video/mp4">
+          Seu navegador não consegue reproduzir este vídeo.
+        </video>
+        <video class="video" controls preload="metadata" playsinline poster="img/video-capa2.jpg">
+          <source src="video/treino2.mp4" type="video/mp4">
+          Seu navegador não consegue reproduzir este vídeo.
+        </video>
+      </div>
+    </section>
+
+    <!-- DICAS -->
+    <section id="dicas" class="secao secao-alt">
+      <div class="wrap">
+        <h2>Dicas de quem não desiste</h2>
+
+        <ul class="dicas">
+          <li>
+            <h3>Nunca desista</h3>
+            <p>Os dias ruins vão existir. Quem continua é quem chega lá.</p>
+          </li>
+          <li>
+            <h3>Tenha paciência com a evolução</h3>
+            <p>Se ela demorar para aparecer, não desanime. Ela aparece para quem continua.</p>
+          </li>
+          <li>
+            <h3>Coma proteína</h3>
+            <p>É a base para o músculo se recuperar e crescer.</p>
+          </li>
+          <li>
+            <h3>Não ligue para o que pensam</h3>
+            <p>Ninguém sabe o seu motivo. Treine por você.</p>
+          </li>
+          <li>
+            <h3>Seja constante</h3>
+            <p>Treino regular vence treino perfeito que acontece uma vez.</p>
+          </li>
+          <li>
+            <h3>Durma bem</h3>
+            <p>Eu tento chegar às 8 horas de sono. É nelas que o corpo se refaz.</p>
+          </li>
+        </ul>
+
+        <div class="mito">
+          <div class="mito-lado">
+            <h3>Mito</h3>
+            <p class="mito-texto">&ldquo;Panturrilha não cresce com treino, o tamanho dela é sempre o mesmo por causa da genética.&rdquo;</p>
+          </div>
+          <div class="mito-lado">
+            <h3>O que eu penso</h3>
+            <p>A genética influencia, sim, mas a panturrilha responde a treino. O segredo é carga, amplitude completa e frequência, como em qualquer outro músculo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FRASE -->
+    <section class="frase-faixa" aria-label="Frase motivacional">
+      <div class="wrap">
+        <blockquote id="frase" class="frase">A motivação te leva à academia. A disciplina te faz voltar amanhã.</blockquote>
+        <button id="btn-frase" class="botao" type="button">Outra frase</button>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="secao">
+      <div class="wrap">
+        <h2>Contato</h2>
+        <p class="intro">Quer trocar ideia sobre treino ou sobre tecnologia? Me chame.</p>
+
+        <ul class="contatos">
+          <li><a href="mailto:ferreiraroniel220@gmail.com">ferreiraroniel220@gmail.com</a></li>
+          <li><a href="https://www.instagram.com/ronielferreiraa_/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://github.com/ferreiraroniel220-eng" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <div class="wrap">
+      <p>Roniel, 2026. Feito com HTML, CSS e JavaScript.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

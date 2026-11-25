@@ -1,0 +1,645 @@
+/* ==========================================================
+   Portfólio de academia | Roniel
+   Paleta: carbono, giz e vermelho de anilha
+   ========================================================== */
+
+:root[data-theme="dark"] {
+  --bg: #0d0d0f;
+  --surface: #17171a;
+  --line: #2e2e33;
+  --text: #ece9e3;
+  --muted: #9a9aa2;
+  --accent: #f0384d;
+  --accent-fill: #d4162e;
+  --on-accent: #ffffff;
+}
+
+:root[data-theme="light"] {
+  --bg: #e6e6e8;
+  --surface: #d9d9dd;
+  --line: #bdbdc3;
+  --text: #121214;
+  --muted: #55555c;
+  --accent: #b80d27;
+  --accent-fill: #b80d27;
+  --on-accent: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Barlow", system-ui, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: "Big Shoulders Display", "Arial Narrow", Impact, sans-serif;
+  line-height: 0.95;
+}
+
+h1,
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+
+h2 {
+  font-size: clamp(2.6rem, 8vw, 4.5rem);
+  font-weight: 900;
+  margin-bottom: 1.25rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+
+p {
+  margin: 0 0 1rem;
+  max-width: 62ch;
+}
+
+.wrap {
+  width: min(100% - 2.5rem, 70rem);
+  margin-inline: auto;
+}
+
+.intro {
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+/* ---------- Botões ---------- */
+
+.botao {
+  display: inline-block;
+  padding: 0.85rem 1.6rem;
+  border: 0;
+  background: var(--accent-fill);
+  color: var(--on-accent);
+  font: 700 1.05rem/1 "Barlow", sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.botao:hover {
+  filter: brightness(1.12);
+}
+
+.botao-simples {
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--text);
+  font: 600 0.95rem/1 "Barlow", sans-serif;
+  cursor: pointer;
+}
+
+.botao-simples:hover {
+  border-color: var(--accent);
+}
+
+/* ---------- Topo e navegação ---------- */
+
+.topo {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+
+.topo-barra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 4rem;
+}
+
+.marca {
+  font: 900 1.9rem/1 "Big Shoulders Display", sans-serif;
+  text-decoration: none;
+  color: var(--accent);
+}
+
+.topo-acoes {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+
+.menu.aberto {
+  display: block;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 1.25rem 1rem;
+}
+
+.menu a {
+  display: block;
+  padding: 0.7rem 0;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  color: var(--accent);
+}
+
+/* ---------- Início ---------- */
+
+.hero {
+  padding: clamp(2.5rem, 7vw, 5rem) 0 clamp(3rem, 8vw, 6rem);
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-grid {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 11vw, 6.2rem);
+  font-weight: 900;
+  margin-bottom: 1.25rem;
+}
+
+.hero-sub {
+  color: var(--muted);
+  font-size: 1.15rem;
+  margin-bottom: 1.75rem;
+}
+
+.sequencia {
+  position: relative;
+  padding: 1.5rem 1.5rem 1.75rem;
+  border-left: 6px solid var(--accent);
+  background: var(--surface);
+}
+
+.chama {
+  width: 3rem;
+  height: 3rem;
+  fill: var(--accent);
+}
+
+.sequencia-numero {
+  margin: 0;
+  max-width: none;
+  font: 900 clamp(7rem, 30vw, 12rem) / 0.85 "Big Shoulders Display", sans-serif;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.sequencia-legenda {
+  margin: 0.5rem 0 1rem;
+  font: 800 1.8rem/1 "Big Shoulders Display", sans-serif;
+  text-transform: uppercase;
+}
+
+.sequencia-hoje {
+  margin: 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+}
+
+/* ---------- Seções ---------- */
+
+.secao {
+  padding: clamp(3.5rem, 9vw, 6rem) 0;
+}
+
+.secao-alt {
+  background: var(--surface);
+}
+
+/* ---------- Sobre ---------- */
+
+.sobre-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.sobre-foto {
+  width: 100%;
+  max-width: 26rem;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border: 1px solid var(--line);
+}
+
+.sobre-texto h3 {
+  margin: 2rem 0 1rem;
+}
+
+.significados {
+  margin: 0 0 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.significados div {
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.significados dt {
+  font: 800 1.5rem/1 "Big Shoulders Display", sans-serif;
+  color: var(--accent);
+}
+
+.significados dd {
+  margin: 0.25rem 0 0;
+}
+
+/* ---------- Rotina ---------- */
+
+.semana {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+
+.semana li {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr;
+  gap: 0.15rem 1rem;
+  padding: 1rem 0.75rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.semana-dia {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.semana-treino {
+  font: 900 2.2rem/1 "Big Shoulders Display", sans-serif;
+  text-transform: uppercase;
+}
+
+.semana-foco {
+  grid-column: 2;
+}
+
+.semana .descanso .semana-treino {
+  color: var(--muted);
+}
+
+.semana li.hoje {
+  background: var(--accent-fill);
+  color: var(--on-accent);
+}
+
+.semana li.hoje .semana-dia,
+.semana li.hoje .semana-treino {
+  color: var(--on-accent);
+}
+
+/* ---------- Evolução ---------- */
+
+.evolucao-grid {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.linha-tempo {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 1.75rem;
+  border-left: 2px solid var(--line);
+}
+
+.linha-tempo li {
+  position: relative;
+  padding-bottom: 1.75rem;
+}
+
+.linha-tempo li:last-child {
+  padding-bottom: 0;
+}
+
+.linha-tempo li::before {
+  content: "";
+  position: absolute;
+  left: -2.2rem;
+  top: 0.25rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  background: var(--accent);
+}
+
+.linha-tempo h3 {
+  margin-bottom: 0.4rem;
+}
+
+.comparador {
+  --pos: 50%;
+  position: relative;
+  width: 100%;
+  max-width: 26rem;
+  margin: 0;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.comparador img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.comp-depois {
+  clip-path: inset(0 0 0 var(--pos));
+}
+
+.comp-rotulo {
+  position: absolute;
+  bottom: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  background: var(--bg);
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.comp-rotulo-antes {
+  left: 0.75rem;
+}
+
+.comp-rotulo-depois {
+  right: 0.75rem;
+}
+
+.comparador input[type="range"] {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: ew-resize;
+}
+
+.comp-alca {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--pos);
+  width: 4px;
+  margin-left: -2px;
+  background: var(--accent);
+  pointer-events: none;
+}
+
+.comparador input:focus-visible ~ .comp-alca {
+  box-shadow: 0 0 0 4px var(--text);
+}
+
+/* ---------- Dicas ---------- */
+
+.dicas {
+  list-style: none;
+  margin: 2rem 0 3rem;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+
+.dicas li {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.dicas h3 {
+  margin-bottom: 0.35rem;
+}
+
+.dicas p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.mito {
+  display: grid;
+  gap: 0;
+  border: 2px solid var(--accent);
+}
+
+.mito-lado {
+  padding: 1.5rem;
+}
+
+.mito-lado + .mito-lado {
+  border-top: 2px solid var(--accent);
+}
+
+.mito-lado h3 {
+  margin-bottom: 0.75rem;
+  color: var(--accent);
+}
+
+.mito-texto {
+  margin: 0;
+  text-decoration: line-through;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+}
+
+.mito-lado p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Frase ---------- */
+
+.frase-faixa {
+  padding: clamp(3rem, 8vw, 5rem) 0;
+  background: var(--accent-fill);
+  color: var(--on-accent);
+}
+
+.frase {
+  margin: 0 0 1.75rem;
+  max-width: 24ch;
+  font: 900 clamp(2.4rem, 8vw, 4.6rem) / 1 "Big Shoulders Display", sans-serif;
+  text-transform: uppercase;
+}
+
+.frase-faixa .botao {
+  background: var(--on-accent);
+  color: #111;
+}
+
+/* ---------- Contato ---------- */
+
+.contatos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contatos a {
+  display: inline-block;
+  padding: 0.35rem 0;
+  font: 800 clamp(1.8rem, 6vw, 3rem) / 1.1 "Big Shoulders Display", sans-serif;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+  overflow-wrap: anywhere;
+}
+
+.contatos a:hover {
+  color: var(--accent);
+}
+
+/* ---------- Rodapé ---------- */
+
+.rodape {
+  padding: 1.75rem 0;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.rodape p {
+  margin: 0;
+}
+
+/* ==========================================================
+   Telas maiores
+   ========================================================== */
+
+@media (min-width: 760px) {
+  .botao-menu {
+    display: none;
+  }
+
+  .menu {
+    position: static;
+    display: block;
+    border: 0;
+    background: transparent;
+  }
+
+  .menu ul {
+    display: flex;
+    gap: 1.5rem;
+    padding: 0;
+  }
+
+  .menu a {
+    padding: 0.4rem 0;
+  }
+
+  .semana li {
+    grid-template-columns: 8rem 9rem 1fr;
+    align-items: baseline;
+  }
+
+  .semana-foco {
+    grid-column: auto;
+  }
+
+  .sobre-grid,
+  .evolucao-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3.5rem;
+    align-items: start;
+  }
+
+  .dicas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+  }
+
+  .mito {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .mito-lado + .mito-lado {
+    border-top: 0;
+    border-left: 2px solid var(--accent);
+  }
+}
+
+@media (min-width: 960px) {
+  .hero-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 4rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ---------- Vídeo ---------- */
+
+.video {
+  display: block;
+  width: 100%;
+  max-width: 56rem;
+  aspect-ratio: 16 / 9;
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+
+@media (min-width: 760px) {
+  .video {
+    border-width: 2px;
+  }
+}

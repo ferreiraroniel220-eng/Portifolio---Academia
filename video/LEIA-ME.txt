@@ -1,0 +1,2 @@
+Coloque aqui o seu vídeo com o nome treino.mp4.
+Dica: use MP4 (H.264), de preferência com menos de 25 MB para poder enviar pelo site do GitHub.
